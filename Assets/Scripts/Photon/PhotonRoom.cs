@@ -210,6 +210,13 @@ public class PhotonRoom : MonoBehaviourPunCallbacks,IInRoomCallbacks
     private void RPC_CreatePlayer()
     {
         PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PhotonNetworkPlayer"), transform.position,Quaternion.identity,0);
+        //Instantiateは3つの引数をとり、Instantiate(ﾌﾟﾚﾊﾌﾞ,位置情報,回転情報)
+        //PhotonNetwork型の、ﾌﾟﾚﾊﾌﾞ変数PhotonPrefabs/PhotonNetworkPlayerのtransform.position、無回転、を指定してｲﾝｽﾀﾝｽを生成しろ
+        //Path.Combine("PhotonPrefabs","PhotonNetworkPlayer")でPhotonPrefabs/PhotonNetworkPlayerの意味
+        //このtransform.positionという書き方は、変数に設定された位置を指定することになるのではなく！、このスクリプトがアタッチされているゲームオブジェクトの位置をもってくる、このﾌﾟﾛｼﾞｪｸﾄの場合、RoomController
+        //Quaternion.identityで無回転
+        //最初の３つは通常のInstantiateと同じです。最後のグループには、プレファブにアタッチされているPhotonViewのプロパティにあるgroupと同じ数字を入れる　←　このPhotonNetworkPlayerのPhotonViewにはgroupﾌﾟﾛﾊﾟﾃｨがないような・・・
+
     }
 
 }
