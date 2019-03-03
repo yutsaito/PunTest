@@ -61,3 +61,6 @@ public class PlayerMovement : MonoBehaviour
 //and gave the public variables: Movement Speed and Rotation Speed a value. anything over 0 will work 
 //(if you don't set it ..its default is '0" and it won't move) he never skips a beat though many do  
 //but not on his videos..this was a first I have seen a semi-oversight. I blame it on video editing! :)﻿
+
+//CharacterController:このコンポーネントはAnimatorを使用してより速い動きのキャラクターを作成する、
+//Unityが提供するStandard Assetです。https://doc.photonengine.com/ja-jp/pun/current/demos-and-tutorials/pun-basics-tutorial/player-prefab

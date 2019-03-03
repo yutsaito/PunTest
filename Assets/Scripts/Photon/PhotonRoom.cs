@@ -179,7 +179,7 @@ public class PhotonRoom : MonoBehaviourPunCallbacks,IInRoomCallbacks
         readyToStart = false;
     }
 
-    void OnSceneFinishedLoading(Scene scene,LoadSceneMode mode)
+    void OnSceneFinishedLoading(Scene scene,LoadSceneMode mode)     //他の人がroomにjoinで呼ばれる、本質的にOnJoinedRoon()と同一
     {
         currentScene = scene.buildIndex;
         if (currentScene == MultiplayerSetting.multiplayerSetting.multiplayerScene)
